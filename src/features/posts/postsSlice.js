@@ -15,7 +15,7 @@ const postsSlice = createSlice({
       reducer(state, action) {
         state.push(action.payload)
       },
-      // `Prepare` transform the arguments passed into an action
+      // `Prepare` allows to modify the `payload` (Transform the arguments passed into an action)
       prepare(title, content) {
         return {
           // `Prepare` function return a payload :
