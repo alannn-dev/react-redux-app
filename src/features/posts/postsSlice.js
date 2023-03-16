@@ -16,13 +16,14 @@ const postsSlice = createSlice({
         state.push(action.payload)
       },
       // `Prepare` allows to modify the `payload` (Transform the arguments passed into an action)
-      prepare(title, content) {
+      prepare(title, content, userId) {
         return {
           // `Prepare` function return a payload :
           payload: {
             id: nanoid(),
             title,
             content,
+            user: userId,
           },
         }
       },
